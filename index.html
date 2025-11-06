@@ -9,29 +9,28 @@
 </head>
 <body>
    <header id="header">
-     <div class="container-logo">
-       <a href="#header">
-        <img src="imagens/logoOBSECOISS.png" alt="Logo do Observatório">
-       </a>
-     </div>
+  <div class="container-logo">
+    <a href="#header">
+      <img src="imagens/logoOBSECOISS.png" alt="Logo do Observatório">
+    </a>
+  </div>
 
-     <div class="container-navbar">
-         <!-- Ícone do menu hamburguer (fica visível apenas no mobile) -->
-         <div class="menu-toggle" id="menu-toggle">
-          ☰
-         </div>
+  <div class="container-navbar">
+    <!-- botão real -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
 
-       <div class="navbar-nav">
-         <ul class="nav">
-           <li class="nav-item"><a href="aboutus.html">QUEM SOMOS</a></li>
-           <li class="nav-item"><a href="#">FAÇA PARTE</a></li>
-           <li class="nav-item"><a href="#">ECOSSISTEMA</a></li>
-           <li class="nav-item"><a href="#">ODS</a></li>
-           <li class="nav-item"><a href="#">CONTATOS</a></li>
-         </ul>
-       </div>
-     </div>
-   </header>
+    <nav class="navbar-nav">
+      <ul class="nav" id="nav-menu">
+        <li class="nav-item"><a href="aboutus.html">QUEM SOMOS</a></li>
+        <li class="nav-item"><a href="#">FAÇA PARTE</a></li>
+        <li class="nav-item"><a href="#">ECOSSISTEMA</a></li>
+        <li class="nav-item"><a href="#">ODS</a></li>
+        <li class="nav-item"><a href="#">CONTATOS</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 
     <div class="container-home">
         <div class="home-banner">
@@ -107,6 +106,6 @@
       <a href="#">Política de Privacidade</a>
     </div>
   </footer>
-    <script src="js/script.js"></script>
+ <script src="script.js"></script>
 </body>
 </html>

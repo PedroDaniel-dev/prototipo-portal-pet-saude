@@ -46,7 +46,6 @@ header .container-logo img {
 /* Se a tela for MAIOR que 1800px de largura*/
 @media (min-width: 1800px) {
   header .container-logo img {
-    /* ...para telas gigantes */
     height: 90px; 
   }
 }
@@ -87,49 +86,49 @@ header .container-logo img {
 /* ÍCONE HAMBÚRGUER */
 .menu-toggle {
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 18px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: #555;
   cursor: pointer;
-  margin-right: 25px;
+  user-select: none;
+  margin-right: 16px;
+  position: relative;
+  z-index: 9999; /* garante que o botão fique acima */
+  padding: 4px;
 }
 
-.menu-toggle span {
-  display: block;
-  height: 3px;
-  width: 100%;
-  background-color: #555555;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+/* Acessibilidade visual de foco */
+.menu-toggle:focus {
+  outline: 2px solid rgba(64,207,255,0.4);
+  outline-offset: 2px;
 }
 
-/* MENU MOBILE */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
+  .menu-toggle { display: block; }
 
+  /* estado fechado (padrão) */
   .navbar-nav .nav {
     display: none;
     flex-direction: column;
-    gap: 20px;
+    gap: 12px;
     position: absolute;
-    top: 80px;
+    top: 100px; 
     right: 0;
     width: 100%;
     background-color: #F7F7F7;
-    padding: 20px 0;
+    padding: 16px 0;
     border-top: 1px solid #eee;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    z-index: 2000;
+    pointer-events: auto;
   }
 
   .navbar-nav .nav.active {
     display: flex;
   }
 
-  .nav-item {
-    text-align: center;
-  }
+  .nav-item { text-align: center; }
 }
 
 /* HOME / BANNER */
@@ -430,3 +429,101 @@ hr {
     text-align: center;
   }
 }
+/* RESPONSIVIDADE MOBILE (até 360px) */
+@media (max-width: 400px) {
+
+  /* GERAL */
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    height: 80px;
+    padding: 0 10px;
+  }
+
+  header .container-logo img {
+    height: 50px;
+  }
+
+  /* Ajuste do banner */
+  .home-banner {
+    aspect-ratio: 1 / 1; /* formato mais quadrado no mobile */
+  }
+
+  /* Ajustes no mapa */
+  .caixa-mapa {
+    width: 95%;
+    height: 350px;
+  }
+
+  /* EQUIPE */
+  .container-cards-equipe {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .card-equipe {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-foto img {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* FOOTER MOBILE */
+  footer {
+    padding: 20px 10px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  /* Remove textos e deixa só ícones e contatos */
+  .footer-esquerda,
+  .footer-meio {
+    display: none; /* esconde as seções com textos */
+  }
+
+  .footer-direita {
+    align-items: center;
+  }
+
+  .footer-direita h3 {
+    display: none; /* remove título tipo "Contato" */
+  }
+
+  .footer-direita p {
+    font-size: 13px;
+  }
+
+  .footer-icones {
+    justify-content: center;
+    margin-top: 15px;
+    gap: 25px;
+  }
+
+  .footer-icones img.icones {
+    width: 30px;
+    height: 30px;
+  }
+
+  hr {
+    margin: 15px 0 10px;
+  }
+
+  .footer-baixo {
+    font-size: 12px;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
