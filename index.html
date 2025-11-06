@@ -8,31 +8,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header id="header">
-        <div class="container-logo">
-            <a href="#header">
-                <img src="imagens/logoOBSECOISS.png" alt="Logo do Observatório">
-            </a>
-        </div>
+   <header id="header">
+  <div class="container-logo">
+    <a href="#header">
+      <img src="imagens/logoOBSECOISS.png" alt="Logo do Observatório">
+    </a>
+  </div>
 
-        <div class="container-navbar">
-                <div class="navbar-nav">
-                    <ul class="nav">
-                        <li class="nav-item"><a href="aboutus.html">QUEM SOMOS</a></li>
-                        <li class="nav-item"><a href="#">FAÇA PARTE</a></li>
-                        <li class="nav-item"><a href="#">ECOSSISTEMA</a></li>
-                        <li class="nav-item"><a href="#">ODS</a></li>
-                        <li class="nav-item"><a href="#">CONTATOS</a></li>
-                    </ul>
-                </div>
-        </div>
+  <div class="container-navbar">
+    <!-- botão real -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
 
-    </header>
+    <nav class="navbar-nav">
+      <ul class="nav" id="nav-menu">
+        <li class="nav-item"><a href="aboutus.html">QUEM SOMOS</a></li>
+        <li class="nav-item"><a href="#">FAÇA PARTE</a></li>
+        <li class="nav-item"><a href="#">ECOSSISTEMA</a></li>
+        <li class="nav-item"><a href="#">ODS</a></li>
+        <li class="nav-item"><a href="#">CONTATOS</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 
     <div class="container-home">
         <div class="home-banner">
-            
+          <img src="imagens/homeBanner.png" alt="Banner principal">
         </div>
     </div>
 
@@ -55,7 +57,7 @@
     <div class="footer-container">
       <!-- COLUNA 1: LOGO + DESCRIÇÃO -->
        <div class="footer-esquerda">
-        <img height="160px" src="imagens/iconeOBSECOISS.png" alt="">
+        <img height="160px" src="imagens/logoOBSECOISS.png" alt="">
         <div class="descricao">
                 <p class="footer-descricao">
                 Projeto desenvolvido em parceria entre a UNIRIO, a Secretaria Municipal de Saúde do Rio de Janeiro 
@@ -104,6 +106,6 @@
       <a href="#">Política de Privacidade</a>
     </div>
   </footer>
-    <script src="js/script.js"></script>
+ <script src="script.js"></script>
 </body>
 </html>
