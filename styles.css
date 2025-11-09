@@ -246,6 +246,243 @@ header .container-logo img {
 .faça-parte-botao:hover {
   background-color: #005582;
 }
+
+/* ======== SEÇÃO ODS ======== */
+.container-ods {
+  padding: 80px 20px;
+  background: #F7F7F7;
+  text-align: center;
+}
+
+.titulo-ods {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* GRID ODS */
+.ods-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  justify-items: center;
+  align-items: start;
+  max-width: 1000px;
+  margin: 0 auto;
+  row-gap: 35px;
+}
+
+.ods-grid button:nth-child(n+6) {
+  /* desloca a segunda linha levemente para centralizar entre as de cima */
+  transform: translateX(50px);
+}
+@media (max-width: 1024px) {
+  .ods-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .ods-grid button:nth-child(n+6) {
+    transform: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .ods-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+.ods-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s;
+  border-radius: 10px;
+}
+
+.ods-btn img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.ods-btn span {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  color: #555555;
+  font-weight: 600;
+}
+
+.ods-btn[aria-pressed="true"] img {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 4px #005580 inset;
+}
+
+.ods-btn:hover img {
+  transform: scale(1.08);
+}
+
+/* ======== BOTÃO "LIMPAR FILTROS" ======== */
+.ods-controls {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.ods-clear {
+  background: linear-gradient(135deg, #007acc, #0056b3);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.ods-clear:hover {
+  background: linear-gradient(135deg, #0056b3, #003d80);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.ods-help {
+  color: #555555;
+  font-size: 0.95rem;
+  margin-top: 12px;
+  opacity: 0.9;
+}
+
+/* ======== GRID DE PROJETOS ======== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======== CARD DE PROJETO ======== */
+.project-card {
+  background-color: #F7F7F7;
+  color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 340px;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.project-visual {
+  background: linear-gradient(135deg, #007acc, #0056b3);
+  padding: 25px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-body {
+  padding: 20px;
+  text-align: left;
+}
+
+.project-title { 
+  font-size: 1.2rem; 
+  color: #003b5c; 
+  margin-bottom: 10px;
+}
+
+.project-desc {
+  color: #555555;
+  font-size: 0.95rem; 
+  margin-bottom: 10px; 
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ======== MINI ODS - CÍRCULOS COLORIDOS ======== */
+.mini-ods {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+/* ======== CORES OFICIAIS DAS ODS ======== */
+.mini-ods[data-ods="1"]  { background: #e5243b; }   /* Erradicação da pobreza */
+.mini-ods[data-ods="2"]  { background: #dda63a; }   /* Fome zero */
+.mini-ods[data-ods="3"]  { background: #4c9f38; }   /* Saúde e bem-estar */
+.mini-ods[data-ods="5"]  { background: #ff3a21; }   /* Igualdade de gênero */
+.mini-ods[data-ods="6"]  { background: #26bde2; }   /* Água potável */
+.mini-ods[data-ods="10"] { background: #dd1367; }   /* Redução das desigualdades */
+.mini-ods[data-ods="11"] { background: #fd9d24; }   /* Cidades sustentáveis */
+.mini-ods[data-ods="13"] { background: #3f7e44; }   /* Ação climática */
+.mini-ods[data-ods="17"] { background: #19486a; }   /* Parcerias e meios de implementação */
+
+.project-location { 
+  color: #666; 
+  font-size: 0.9rem; 
+}
+
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 900px) {
+  .ods-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .ods-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ods-btn img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+
 /* MAPA */
 .container-mapa {
   width: 100%;
