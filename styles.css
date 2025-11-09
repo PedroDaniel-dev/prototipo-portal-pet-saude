@@ -8,8 +8,17 @@
 
 html, body {
   width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
   background-color: #F7F7F7;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* HEADER E NAVBAR */
@@ -282,15 +291,129 @@ header .container-logo img {
   }
 }
 
-/* NOSSA EQUIPE */
+/* FAÇA PARTE PAG */
+.container-faca-parte-pagina {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #F7F7F7;
+  padding: 40px;
+}
 
+.titulo-faca-parte-pagina {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.descricao-faca-parte-pagina {
+  font-size: 1.25rem;
+  color: #555555;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.container-cards-atores {
+  position: relative;
+  z-index: 1;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px;
+  margin-top: 0;
+  gap: 20%;
+  padding: 5rem;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container-cards-atores::before {
+  content: "";
+  position: absolute;
+  /* centra em relação à viewport, não ao container */
+  left: 50vw;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 140vw;              /* aumenta o "zoom" horizontal (ajuste conforme precisar) */
+  height: 120%;              /* cobre a altura do container; ajuste se necessário */
+  background-image: url("imagens/backgroundfacaparte.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.background-faca-parte {
+  display: none !important;
+}
+
+.card-atores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  z-index: 2;
+}
+
+.card-icone img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+  .container-cards-atores::before { 
+    width: 140vw; 
+  }
+}
+@media (max-width: 900px) {
+  .container-cards-atores::before { 
+    width: 120vw; 
+  }
+}
+@media (max-width: 480px) {
+  .container-cards-atores::before { 
+    width: 110vw; 
+    opacity: 0.35; 
+  }
+}
+
+/* NOSSA EQUIPE */
 .aboutus{
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+  width: 100%;
+  padding: 40px;
   min-height: 580px;
 }
 
 .aboutus h1{
   margin: 40px;
   text-align: center;
+}
+
+.container-aboutus-pagina {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  width: 100%;
+  background-color: #F7F7F7;
+  padding: 40px;
 }
 
 .container-cards-equipe {
@@ -302,6 +425,7 @@ header .container-logo img {
   gap: 30px;
   background-color: #f7f7f7;
   border-radius: 10px;
+  width: 100%;
 }
 
 .card-equipe {
@@ -365,6 +489,7 @@ footer {
   padding: 40px 60px 10px;
   color: #333;
   margin-bottom: 0;
+  flex-shrink: 0;
 }
 
 .footer-container {
