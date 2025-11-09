@@ -195,12 +195,23 @@ header .container-logo img {
 }
 
 /* NOSSA EQUIPE */
+
+.aboutus{
+  min-height: 580px;
+}
+
+.aboutus h1{
+  margin: 40px;
+  text-align: center;
+}
+
 .container-cards-equipe {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 40px;
+  margin-top: 0;
   gap: 30px;
-  padding: 40px;
   background-color: #f7f7f7;
   border-radius: 10px;
 }
@@ -265,6 +276,7 @@ footer {
   background-color: #f7f7f7;
   padding: 40px 60px 10px;
   color: #333;
+  margin-bottom: 0;
 }
 
 .footer-container {
@@ -526,4 +538,3 @@ hr {
     gap: 5px;
   }
 }
-
