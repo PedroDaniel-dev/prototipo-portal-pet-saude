@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Busca Avancada - OBSECOISS</title>
+  <link rel="icon" href="imagens/iconeOBSECOISS.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .pagina-conteudo { padding: 40px; }
+    .filtros-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 20px 0; }
+    .filtro-item { display: flex; flex-direction: column; gap: 8px; }
+    .filtro-item select { padding: 10px; border: 1px solid #d0d0d0; border-radius: 8px; }
+    .acoes-filtro { display: flex; gap: 10px; margin-bottom: 20px; }
+    .detalhes-expansivel { display: none; margin-top: 12px; }
+    .detalhes-expansivel.ativo { display: block; }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <div class="container-logo">
+      <a href="index.html"><img src="imagens/logoOBSECOISS.png" alt="Logo do Observatorio"></a>
+    </div>
+    <div class="container-navbar">
+      <nav class="navbar-nav">
+        <ul class="nav">
+          <li class="nav-item"><a href="index.html">HOME</a></li>
+          <li class="nav-item"><a href="aboutus.html">QUEM SOMOS</a></li>
+          <li class="nav-item"><a href="inovacoes.html">INOVACOES</a></li>
+          <li class="nav-item"><a href="noticias.html">NOTICIAS</a></li>
+          <li class="nav-item"><a href="artigos.html">ARTIGOS</a></li>
+          <li class="nav-item"><a href="facaparte.html">FACA PARTE</a></li>
+          <li class="nav-item"><a href="index.html#container-mapa">ECOSSISTEMA</a></li>
+          <li class="nav-item"><a href="index.html#container-ods">ODS</a></li>
+          <li class="nav-item"><a href="#">CONTATOS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pagina-conteudo" id="busca-avancada-demo">
+    <h1>Busca Avancada de Atores</h1>
+    <p>Exemplos simulados para demonstracao de filtragem por tipo de ator, apoio, area de atuacao e ODS.</p>
+
+    <div class="filtros-grid">
+      <div class="filtro-item">
+        <label for="filtro-tipo-ator">Tipo de ator</label>
+        <select id="filtro-tipo-ator">
+          <option value="">Todos</option>
+          <option value="Instituicao">Instituicao</option>
+          <option value="ONG">ONG</option>
+          <option value="Laboratorio">Laboratorio</option>
+          <option value="Mentoria">Mentoria</option>
+        </select>
+      </div>
+      <div class="filtro-item">
+        <label for="filtro-tipo-apoio">Tipo de apoio</label>
+        <select id="filtro-tipo-apoio">
+          <option value="">Todos</option>
+          <option value="Capacitacao">Capacitacao</option>
+          <option value="Fomento">Fomento</option>
+          <option value="Infraestrutura">Infraestrutura</option>
+          <option value="Mentoria">Mentoria</option>
+        </select>
+      </div>
+      <div class="filtro-item">
+        <label for="filtro-area-atuacao">Area de atuacao</label>
+        <select id="filtro-area-atuacao">
+          <option value="">Todas</option>
+          <option value="Saude Digital">Saude Digital</option>
+          <option value="Inclusao Social">Inclusao Social</option>
+          <option value="Pesquisa Aplicada">Pesquisa Aplicada</option>
+          <option value="Gestao Publica">Gestao Publica</option>
+        </select>
+      </div>
+      <div class="filtro-item">
+        <label for="filtro-ods">ODS</label>
+        <select id="filtro-ods">
+          <option value="">Todos</option>
+          <option value="3">ODS 3</option>
+          <option value="10">ODS 10</option>
+          <option value="11">ODS 11</option>
+          <option value="17">ODS 17</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="acoes-filtro">
+      <button id="aplicar-filtros" class="linkedin-botao">Aplicar filtros</button>
+      <button id="limpar-filtros" class="linkedin-botao">Limpar filtros</button>
+    </div>
+
+    <section class="container-cards-equipe" id="resultados-busca"></section>
+  </main>
+
+  <script src="extras.js"></script>
+</body>
+</html>

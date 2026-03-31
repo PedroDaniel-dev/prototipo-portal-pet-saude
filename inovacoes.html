@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inovacoes - OBSECOISS</title>
+  <link rel="icon" href="imagens/iconeOBSECOISS.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .pagina-conteudo { padding: 40px; }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+    .card-demo { background: #fff; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden; }
+    .card-demo img { width: 100%; height: 180px; object-fit: cover; }
+    .card-demo .conteudo { padding: 16px; }
+    .detalhes-expansivel { display: none; margin-top: 12px; color: #444; }
+    .detalhes-expansivel.ativo { display: block; }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <div class="container-logo">
+      <a href="index.html"><img src="imagens/logoOBSECOISS.png" alt="Logo do Observatorio"></a>
+    </div>
+    <div class="container-navbar">
+      <nav class="navbar-nav">
+        <ul class="nav">
+          <li class="nav-item"><a href="index.html">HOME</a></li>
+          <li class="nav-item"><a href="aboutus.html">QUEM SOMOS</a></li>
+          <li class="nav-item"><a href="inovacoes.html">INOVACOES</a></li>
+          <li class="nav-item"><a href="noticias.html">NOTICIAS</a></li>
+          <li class="nav-item"><a href="artigos.html">ARTIGOS</a></li>
+          <li class="nav-item"><a href="facaparte.html">FACA PARTE</a></li>
+          <li class="nav-item"><a href="index.html#container-mapa">ECOSSISTEMA</a></li>
+          <li class="nav-item"><a href="index.html#container-ods">ODS</a></li>
+          <li class="nav-item"><a href="#">CONTATOS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pagina-conteudo">
+    <h1>Inovacoes</h1>
+    <p>Exemplos interativos de projetos e iniciativas em saude digital.</p>
+
+    <section class="cards-grid">
+      <article class="card-demo">
+        <img src="imagens/homeBanner.png" alt="Cartaz do projeto Telemedicina Comunitaria">
+        <div class="conteudo">
+          <h3>Telemedicina Comunitaria</h3>
+          <p>Atendimento remoto para comunidades com apoio de agentes de saude.</p>
+          <button class="linkedin-botao abrir-detalhes-inovacao" data-detail="detalhe-inovacao-1">Ver detalhes</button>
+          <div class="detalhes-expansivel" id="detalhe-inovacao-1">
+            <p>Conecta UBS, equipes locais e especialistas para triagem e acompanhamento de pacientes cronicos.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card-demo">
+        <img src="imagens/logoPETSaude.png" alt="Cartaz do Projeto de Mentoria Social">
+        <div class="conteudo">
+          <h3>Projeto de Mentoria Social</h3>
+          <p>Rede de mentores para acelerar iniciativas de impacto em saude.</p>
+          <button class="linkedin-botao abrir-detalhes-inovacao" data-detail="detalhe-inovacao-2">Ver detalhes</button>
+          <div class="detalhes-expansivel" id="detalhe-inovacao-2">
+            <p>Oferece trilhas de mentoria para gestao, captacao e validacao de solucoes em territorios vulneraveis.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="card-demo">
+        <img src="imagens/logosms.png" alt="Cartaz do Painel de Monitoramento em Saude">
+        <div class="conteudo">
+          <h3>Painel de Monitoramento em Saude</h3>
+          <p>Visualizacao de indicadores para apoio a decisao em politicas publicas.</p>
+          <button class="linkedin-botao abrir-detalhes-inovacao" data-detail="detalhe-inovacao-3">Ver detalhes</button>
+          <div class="detalhes-expansivel" id="detalhe-inovacao-3">
+            <p>Centraliza dados de acompanhamento territorial para orientar acoes de prevencao e resposta rapida.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="extras.js"></script>
+</body>
+</html>

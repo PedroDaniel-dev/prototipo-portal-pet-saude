@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noticias - OBSECOISS</title>
+  <link rel="icon" href="imagens/iconeOBSECOISS.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .pagina-conteudo { padding: 40px; }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-top: 20px; }
+    .card-demo { background: #fff; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); padding: 18px; }
+    .meta { color: #666; font-size: 14px; margin: 8px 0; }
+    .detalhes-expansivel { display: none; margin-top: 12px; }
+    .detalhes-expansivel.ativo { display: block; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+    .form-grid .full { grid-column: 1 / -1; }
+    .form-grid input, .form-grid textarea { padding: 10px; border-radius: 8px; border: 1px solid #d7d7d7; }
+  </style>
+</head>
+<body>
+  <header id="header">
+    <div class="container-logo">
+      <a href="index.html"><img src="imagens/logoOBSECOISS.png" alt="Logo do Observatorio"></a>
+    </div>
+    <div class="container-navbar">
+      <nav class="navbar-nav">
+        <ul class="nav">
+          <li class="nav-item"><a href="index.html">HOME</a></li>
+          <li class="nav-item"><a href="aboutus.html">QUEM SOMOS</a></li>
+          <li class="nav-item"><a href="inovacoes.html">INOVACOES</a></li>
+          <li class="nav-item"><a href="noticias.html">NOTICIAS</a></li>
+          <li class="nav-item"><a href="artigos.html">ARTIGOS</a></li>
+          <li class="nav-item"><a href="facaparte.html">FACA PARTE</a></li>
+          <li class="nav-item"><a href="index.html#container-mapa">ECOSSISTEMA</a></li>
+          <li class="nav-item"><a href="index.html#container-ods">ODS</a></li>
+          <li class="nav-item"><a href="#">CONTATOS</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pagina-conteudo">
+    <h1>Noticias</h1>
+    <p>Exemplos de noticias para demonstracao de conteudo e interacao.</p>
+
+    <section class="card-demo">
+      <h2>Publicar nova noticia</h2>
+      <form id="form-noticias" class="form-grid">
+        <input id="noticia-titulo" type="text" placeholder="Titulo" required>
+        <input id="noticia-tema" type="text" placeholder="Tema" required>
+        <textarea id="noticia-resumo" class="full" placeholder="Resumo" rows="3" required></textarea>
+        <input id="noticia-link" class="full" type="url" placeholder="Link da noticia" required>
+        <button class="linkedin-botao full" type="submit">Adicionar noticia</button>
+      </form>
+    </section>
+
+    <section class="cards-grid" id="lista-noticias"></section>
+  </main>
+
+  <script src="extras.js"></script>
+</body>
+</html>

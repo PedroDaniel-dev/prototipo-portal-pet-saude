@@ -21,7 +21,11 @@
 
       <nav class="navbar-nav">
         <ul class="nav" id="nav-menu">
+          <li class="nav-item"><a href="index.html">HOME</a></li>
           <li class="nav-item"><a href="aboutus.html">QUEM SOMOS</a></li>
+          <li class="nav-item"><a href="inovacoes.html">INOVACOES</a></li>
+          <li class="nav-item"><a href="noticias.html">NOTICIAS</a></li>
+          <li class="nav-item"><a href="artigos.html">ARTIGOS</a></li>
           <li class="nav-item"><a href="facaparte.html">FAÇA PARTE</a></li>
           <li class="nav-item"><a href="index.html#container-mapa">ECOSSISTEMA</a></li>
           <li class="nav-item"><a href="index.html#container-ods">ODS</a></li>
@@ -146,6 +150,47 @@ Participe do Mapa Virtual de Negócios de Impacto Social e Ambiental do Estado d
       </div>
   </section>
 
+  <section id="busca-avancada-home" style="padding:40px;">
+    <h2 class="titulo-ods">Busca Avancada do Ecossistema</h2>
+    <p class="ods-help">Filtre atores por tipo, ODS, tipo de atuacao e beneficiarios.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;max-width:1100px;margin:16px auto;">
+      <select id="home-filtro-tipo-ator" style="padding:10px;border:1px solid #ddd;border-radius:8px;">
+        <option value="">Tipo de ator (todos)</option>
+        <option value="Mentor">Mentor</option>
+        <option value="ONG">ONG</option>
+        <option value="Instituto privado">Instituto privado</option>
+        <option value="Pesquisador">Pesquisador</option>
+        <option value="Gestor publico">Gestor publico</option>
+      </select>
+      <select id="home-filtro-ods" style="padding:10px;border:1px solid #ddd;border-radius:8px;">
+        <option value="">ODS (todos)</option>
+        <option value="Saude">ODS Saude</option>
+        <option value="Educacao">ODS Educacao</option>
+        <option value="Desigualdades">ODS Desigualdades</option>
+        <option value="Parcerias">ODS Parcerias</option>
+      </select>
+      <select id="home-filtro-atuacao" style="padding:10px;border:1px solid #ddd;border-radius:8px;">
+        <option value="">Tipo de atuacao (todos)</option>
+        <option value="Capacitacao">Capacitacao</option>
+        <option value="Pesquisa">Pesquisa</option>
+        <option value="Gestao">Gestao</option>
+        <option value="Tecnologia social">Tecnologia social</option>
+      </select>
+      <select id="home-filtro-beneficiarios" style="padding:10px;border:1px solid #ddd;border-radius:8px;">
+        <option value="">Beneficiarios (todos)</option>
+        <option value="Comunidades">Comunidades</option>
+        <option value="Profissionais de saude">Profissionais de saude</option>
+        <option value="Pesquisadores">Pesquisadores</option>
+        <option value="Gestores publicos">Gestores publicos</option>
+      </select>
+    </div>
+    <div style="display:flex;gap:10px;justify-content:center;margin-bottom:18px;">
+      <button id="home-aplicar-filtros" class="ods-clear">Aplicar filtros</button>
+      <button id="home-limpar-filtros" class="ods-clear">Limpar</button>
+    </div>
+    <div class="container-cards-equipe" id="home-resultados-busca"></div>
+  </section>
+
   <footer>
     <div class="footer-container">
       <!-- COLUNA 1: LOGO + DESCRIÇÃO -->
@@ -200,5 +245,6 @@ Participe do Mapa Virtual de Negócios de Impacto Social e Ambiental do Estado d
     </div>
   </footer>
  <script src="script.js"></script>
+ <script src="extras.js"></script>
 </body>
 </html>
