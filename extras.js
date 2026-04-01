@@ -213,20 +213,20 @@ document.addEventListener('DOMContentLoaded', () => {
   if (listaNoticias) {
     const noticiasExemplo = [
       {
-        titulo: 'Mutirao de Saude Digital chega a bairros da Zona Norte',
-        resumo: 'Iniciativa conecta moradores a servicos de orientacao e acompanhamento remoto.',
-        tema: 'Inclusao digital em saude',
-        link: '#',
-        detalhe: 'A acao integra equipes locais, ONGs e gestores para ampliar o acesso a atendimento e prevencao.',
-        data: '31/03/2026'
+        titulo: 'Ecossistema da saúde digital no município do Rio de Janeiro: a experiência de criação do aplicativo MinhaSaúdeRio',
+        resumo: 'Aplicativo público amplia o acesso da população a serviços, vacinas e acompanhamento digital de saúde.',
+        tema: 'Saúde Digital • Inovação Social • SUS • Inclusão Tecnológica',
+        link: 'https://cienciaesaudecoletiva.com.br/artigos/ecossistema-da-saude-digital-no-municipio-do-rio-de-janeiro-a-experiencia-de-criacao-do-aplicativo-minhasauderio/19903',
+        detalhe: 'A notícia apresenta como o município do Rio de Janeiro estruturou um ecossistema de saúde digital por meio do aplicativo MinhaSaúdeRio, permitindo que cidadãos acompanhem vacinação, consultas, notificações e atendimento remoto. A proposta reforça a inclusão digital no acesso ao SUS e melhora a comunicação entre população e rede pública de saúde.',
+        data: '01/04/2026'
       },
       {
-        titulo: 'Parceria entre universidades e ONGs fortalece inovacoes sociais',
-        resumo: 'Rede colaborativa cria trilhas de apoio para projetos de impacto no Rio de Janeiro.',
-        tema: 'Ecossistema de inovacao',
-        link: '#',
-        detalhe: 'As instituicoes participantes vao compartilhar metodologias e dados para melhorar a efetividade das iniciativas.',
-        data: '28/03/2026'
+        titulo: 'A Inovação Aberta no SUS',
+        resumo: 'Parcerias entre governo e startups impulsionam soluções tecnológicas para modernizar a saúde pública.',
+        tema: 'Inovação Aberta • Startups • Saúde Pública • Transformação Digital',
+        link: 'https://www.rj.gov.br/saude/node/3684',
+        detalhe: 'A matéria destaca a colaboração entre a Secretaria de Saúde do Rio de Janeiro, startups e empresas de tecnologia para desenvolver soluções inovadoras voltadas ao SUS. O foco está em ampliar acesso, melhorar a experiência do usuário e modernizar processos por meio de ferramentas digitais.',
+        data: '07/11/2025'
       }
     ];
 
@@ -281,20 +281,20 @@ document.addEventListener('DOMContentLoaded', () => {
   if (listaArtigos) {
     const artigosExemplo = [
       {
-        titulo: 'Transformacao Digital no SUS: caminhos de implementacao local',
-        resumo: 'Analise de praticas e desafios para implementar solucoes digitais em redes municipais.',
-        tema: 'Gestao publica e inovacao',
-        autor: 'Equipe Rede Saude Digital RJ',
-        link: '#',
-        detalhe: 'Discute governanca de dados, capacitacao das equipes e estrategias de escalabilidade em servicos publicos.'
+        titulo: 'Transformação digital no Sistema Único de Saúde: interoperabilidade, governança e proteção de dados sensíveis',
+        resumo: 'O artigo discute como a transformação digital do SUS melhora a integração de dados, a gestão pública e a continuidade do cuidado ao paciente.',
+        tema: 'Saúde Digital • SUS • Governança de Dados • Inovação Social',
+        autor: 'Fernanda Schaefer Rivabem, José Luiz de Moura Faleiros Júnior',
+        link: 'https://www.researchgate.net/publication/396042582_Transformacao_digital_no_Sistema_Unico_de_Saude_interoperabilidade_governanca_e_protecao_de_dados_sensiveis',
+        detalhe: 'O estudo analisa a modernização digital do Sistema Único de Saúde, com foco em interoperabilidade entre sistemas, proteção de dados sensíveis e melhoria do fluxo de atendimento. Ele é excelente para representar inovação social, pois mostra como a tecnologia fortalece o acesso universal e a eficiência do serviço público de saúde. O artigo também aborda a Rede Nacional de Dados em Saúde como eixo de integração.'
       },
       {
-        titulo: 'Inovacao Social e Territorio: evidencias de impacto em saude comunitaria',
-        resumo: 'Estudo sobre colaboracao entre ONGs, pesquisadores e gestores em projetos territoriais.',
-        tema: 'Saude comunitaria',
-        autor: 'Laboratorio Carioca de Inovacao',
-        link: '#',
-        detalhe: 'Apresenta indicadores de adesao, alcance e continuidade das iniciativas conectadas ao ecossistema local.'
+        titulo: 'Sistemas Emergentes no Ecossistema Digital Brasileiro de Saúde Pública: Uma Abordagem Sociotécnica',
+        resumo: 'O artigo analisa como sistemas digitais emergentes podem transformar a saúde pública brasileira a partir de uma visão sociotécnica.',
+        tema: 'Saúde Digital • Ecossistemas Sociotécnicos • SUS • Inovação Social',
+        autor: 'Sandro Luís Freire de Castro Silva, Marcelo Fornazin, Rodrigo Pereira dos Santos',
+        link: 'https://www.researchgate.net/publication/336035772_Sistemas_Emergentes_no_Ecossistema_Digital_Brasileiro_de_Saude_Publica_Uma_Abordagem_Sociotecnica',
+        detalhe: 'O trabalho discute como a implementação de sistemas de informação em saúde não deve ser vista apenas como um problema técnico, mas como parte de um ecossistema social, institucional e tecnológico. Ele aborda as relações entre governo, profissionais, infraestrutura digital e população, mostrando como a tecnologia pode ampliar a eficiência do SUS e a inclusão social no acesso à saúde. Para o seu protótipo, esse artigo encaixa perfeitamente como exemplo de artigo acadêmico sobre inovação social em saúde digital.'
       }
     ];
 

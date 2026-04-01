@@ -987,4 +987,8 @@ hr {
     flex-direction: column;
     gap: 5px;
   }
+
+  .pagina-conteudo p {
+    padding: 00px;
+  }
 }
