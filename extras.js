@@ -8,9 +8,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleDetails = (button) => {
     const detailId = button.getAttribute('data-detail');
     const detail = document.getElementById(detailId);
-    if (!detail) return;
+    if (!detail) {
+      console.error('Detalhe não encontrado:', detailId);
+      return;
+    }
     const isOpen = detail.classList.toggle('ativo');
+    console.log('Toggle details - detailId:', detailId, 'isOpen:', isOpen);
+
+    detail.style.display = isOpen ? 'block' : 'none';
+
     button.textContent = isOpen ? 'Ocultar detalhes' : 'Ver detalhes';
+
+    const card = button.closest('.card-demo');
+    if (card) {
+      card.style.overflow = 'visible';
+    }
   };
 
   const createDetailsButton = (className, detailId) => {
@@ -345,12 +357,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const bindExpandableCards = (selector) => {
     const cards = document.querySelectorAll(selector);
+    console.log('bindExpandableCards - encontrados', cards.length, 'elementos para', selector);
     cards.forEach((btn) => {
       btn.addEventListener('click', () => toggleDetails(btn));
     });
   };
 
   bindExpandableCards('.abrir-detalhes-inovacao');
-  bindExpandableCards('.abrir-detalhes-noticia');
-  bindExpandableCards('.abrir-detalhes-artigo');
 });
